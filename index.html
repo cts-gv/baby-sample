@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Martinez Announcement</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-blue: #AEC6CF;
+            --pastel-green: #B2E2D2;
+            --soft-white: #FDFDFF;
+            --accent-blue: #779ECB;
+            --text-color: #555;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--soft-white);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* --- Animations --- */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Bouncing Sports Balls */
+        .ball {
+            position: absolute;
+            font-size: 2rem;
+            z-index: 0;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background-color: var(--pastel-blue);
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* --- Sections --- */
+        section {
+            display: none;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .active { display: block; }
+
+        /* --- Hero Section --- */
+        .hero-img {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 8px solid var(--pastel-green);
+        }
+
+        /* --- Registry Buttons --- */
+        .btn-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s;
+        }
+
+        .amazon { background-color: #FF9900; color: white; }
+        
+        .paypal { 
+            background-color: #003087; color: white; 
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .venmo { 
+            background-color: #3D95CE; color: white; 
+            animation: pulse 2s infinite 0.5s ease-in-out;
+        }
+
+        /* --- Grid for Pregnancy Journey --- */
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* --- Guestbook --- */
+        #message-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin: auto;
+            gap: 10px;
+        }
+
+        textarea {
+            height: 100px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid var(--pastel-blue);
+        }
+
+        .post-btn {
+            background-color: var(--accent-blue);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="animation-container"></div>
+
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('journey')">Our Journey</a>
+        <a onclick="showSection('guestbook')">Well Wishes</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h1>Baby Martinez</h1>
+        <p>A little slugger is on the way!</p>
+        
+        <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1000" alt="Boy toys and sports" class="hero-img">
+        
+        <div class="content-area">
+            <h3>It's a Boy!</h3>
+            <p>We are so excited to introduce our little man to the world. Thank you for being part of our story.</p>
+        </div>
+
+        <div class="btn-container">
+            <a href="YOUR_AMAZON_LINK" class="btn amazon">
+                <i class="fab fa-amazon"></i> Amazon Registry
+            </a>
+            
+            <a href="YOUR_PAYPAL_LINK" class="btn paypal">
+                <i class="fas fa-kiwi-bird"></i> PayPal Support (🧸)
+            </a>
+            
+            <a href="YOUR_VENMO_LINK" class="btn venmo">
+                <i class="fas fa-duck"></i> Venmo Love (🦆)
+            </a>
+        </div>
+    </section>
+
+    <section id="journey">
+        <h2>Following the Pregnancy</h2>
+        <div class="journey-grid">
+            
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Month+1" alt="Month 1">
+                <h4>Month 1</h4> <p>The journey begins! We first found out today.</p> </div>
+
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Month+2" alt="Month 2">
+                <h4>Month 2</h4>
+                <p>First doctor visit went great.</p>
+            </div>
+
+            </div>
+    </section>
+
+    <section id="guestbook">
+        <h2>Kind Words & Wishes</h2>
+        <p>Leave a message for the parents-to-be!</p>
+        
+        <div id="message-form">
+            <input type="text" id="name" placeholder="Your Name" style="padding:10px; border-radius:10px; border:1px solid #AEC6CF;">
+            <textarea id="msg" placeholder="Write your message here..."></textarea>
+            <button class="post-btn" onclick="addMessage()">Post Message</button>
+        </div>
+
+        <div id="messages-display" style="margin-top:30px; text-align: left;">
+            </div>
+    </section>
+
+    <script>
+        // Function to switch between "pages"
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        // Bouncing Sports Balls Animation
+        const container = document.getElementById('animation-container');
+        const icons = ['⚽', '🏀', '🏈', '⚾'];
+        
+        for (let i = 0; i < 15; i++) {
+            let ball = document.createElement('div');
+            ball.className = 'ball';
+            ball.innerText = icons[Math.floor(Math.random() * icons.length)];
+            ball.style.left = Math.random() * 90 + 'vw';
+            ball.style.top = Math.random() * 90 + 'vh';
+            
+            // Randomize bounce speed
+            ball.style.animation = `bounce ${2 + Math.random() * 2}s infinite ease-in-out`;
+            container.appendChild(ball);
+        }
+
+        // Simple local guestbook function (Note: Refreshing clears this unless connected to a database)
+        function addMessage() {
+            const name = document.getElementById('name').value;
+            const msg = document.getElementById('msg').value;
+            if(name && msg) {
+                const div = document.createElement('div');
+                div.style.borderBottom = "1px solid #eee";
+                div.style.padding = "10px";
+                div.innerHTML = `<strong>${name}:</strong> <p>${msg}</p>`;
+                document.getElementById('messages-display').prepend(div);
+                document.getElementById('name').value = '';
+                document.getElementById('msg').value = '';
+            }
+        }
+    </script>
+</body>
+</html>
