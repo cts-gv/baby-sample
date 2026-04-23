@@ -7,21 +7,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --pastel-blue: #AEC6CF;
+            --deep-navy: #1a2a3a;
+            --slate-gray: #2c3e50;
+            --accent-blue: #89CFF0; /* Pastel blue for contrast */
             --pastel-green: #B2E2D2;
-            --soft-blue-bg: #EBF4FA;
-            --accent-blue: #779ECB;
-            --text-color: #555;
-            --card-bg: #ffffff;
+            --text-light: #f4f4f4;
+            --card-bg: rgba(255, 255, 255, 0.95);
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            /* Solid soft gradient background */
-            background: linear-gradient(135deg, var(--soft-blue-bg) 0%, #fdfdff 100%);
+            /* DARK THEME: Solid deep gradient */
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             background-attachment: fixed;
-            color: var(--text-color);
+            color: var(--text-light);
             overflow-x: hidden;
         }
 
@@ -45,28 +45,28 @@
         .ball {
             position: absolute;
             font-size: 2.5rem;
-            opacity: 0.3;
+            opacity: 0.5;
         }
 
-        /* --- Navigation with Hover Animation --- */
+        /* --- Dark Navigation with Hover Animation --- */
         nav {
-            background-color: white;
+            background-color: var(--deep-navy);
             padding: 1.2rem;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
         nav a {
             margin: 0 20px;
             text-decoration: none;
-            color: var(--pastel-blue);
+            color: #ffffff;
             font-weight: bold;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             position: relative;
             transition: color 0.3s ease;
         }
@@ -75,7 +75,6 @@
             color: var(--accent-blue);
         }
 
-        /* Underline animation */
         nav a::after {
             content: '';
             position: absolute;
@@ -112,13 +111,13 @@
             width: 100%;
             max-width: 800px;
             height: auto;
-            border-radius: 30px;
-            border: 10px solid white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
             margin-bottom: 20px;
         }
 
-        /* --- Registry & Donate Buttons with Hover Effects --- */
+        /* --- Registry & Donate Buttons --- */
         .btn-container {
             margin: 40px 0;
             display: flex;
@@ -136,15 +135,13 @@
             align-items: center;
             gap: 12px;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
             color: white;
         }
 
-        /* Hover Effect for all buttons */
         .btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-            filter: brightness(1.1);
+            transform: scale(1.08);
+            filter: brightness(1.2);
         }
 
         .amazon { background-color: #FF9900; }
@@ -162,31 +159,35 @@
         .card {
             background: var(--card-bg);
             padding: 20px;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-            border-bottom: 5px solid var(--pastel-green);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            border-top: 4px solid var(--accent-blue);
             transition: transform 0.3s ease;
             text-align: left;
+            color: #333; /* Darker text for readability on light cards */
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
         }
 
         .card img {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 10px;
             margin-bottom: 15px;
         }
 
         .guestbook-container {
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             padding: 40px;
             border-radius: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1, h2 {
+            text-shadow: 2px 4px 6px rgba(0,0,0,0.3);
         }
 
     </style>
@@ -202,8 +203,8 @@
     </nav>
 
     <section id="home" class="active">
-        <h1 style="font-size: 3.5rem; color: var(--accent-blue); margin-bottom: 10px;">Baby Martinez</h1>
-        <p style="font-size: 1.4rem; color: var(--pastel-blue); font-weight: bold;">Coming Soon • 2026</p>
+        <h1 style="font-size: 4rem; color: var(--accent-blue); margin-bottom: 5px;">Baby Martinez</h1>
+        <p style="font-size: 1.5rem; color: #fff; opacity: 0.9; margin-bottom: 30px;">Arriving 2026</p>
         
         <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1000" alt="Boy toys and sports" class="hero-img">
         
@@ -213,37 +214,37 @@
             <a href="YOUR_VENMO_LINK" class="btn venmo"><i class="fas fa-baseball-ball"></i> Venmo Love ⚾</a>
         </div>
 
-        <h2 style="margin-top: 60px; color: var(--accent-blue); text-align: center;">Welcome to the Team</h2>
+        <h2 style="margin-top: 60px; color: var(--accent-blue);">The Highlights</h2>
         <div class="grid">
             <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Excitement" alt="News">
+                <img src="https://via.placeholder.com/400x300/1e293b/ffffff?text=Excitement" alt="News">
                 <h3>Our Excitement</h3> 
-                <p>Add a note here about how you both felt when you found out you were having a boy!</p> 
+                <p>Change this text to share how you felt finding out about Baby Martinez!</p> 
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Traditions" alt="Traditions">
+                <img src="https://via.placeholder.com/400x300/1e293b/ffffff?text=Traditions" alt="Traditions">
                 <h3>Future Slugger</h3>
-                <p>Write about the sports or activities you're excited to share with him.</p>
+                <p>Add text about the sports you're excited to teach him one day.</p>
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Nursery" alt="Nursery">
+                <img src="https://via.placeholder.com/400x300/1e293b/ffffff?text=Nursery" alt="Nursery">
                 <h3>The Nursery</h3> 
-                <p>Describe the colors, themes, or special items you've picked for his room.</p> 
+                <p>Describe the colors and theme you've picked for his new room.</p> 
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Family" alt="Family">
+                <img src="https://via.placeholder.com/400x300/1e293b/ffffff?text=Family" alt="Family">
                 <h3>Family Roots</h3> 
-                <p>Add a note about the family names or traditions he will carry on.</p> 
+                <p>Share a note about special family names or traditions he will inherit.</p> 
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Big+Adventure" alt="Adventure">
+                <img src="https://via.placeholder.com/400x300/1e293b/ffffff?text=Adventure" alt="Adventure">
                 <h3>The Big Adventure</h3> 
-                <p>Share a message about what "Baby Martinez" means to your family's next chapter.</p> 
+                <p>What does this new chapter mean to you? Put that heart-felt message here.</p> 
             </div>
             <div class="card">
-                <img src="https://via.placeholder.com/400x300?text=Due+Date" alt="Due Date">
-                <h3>Counting Down</h3> 
-                <p>Share your due date or any final preparations you are making!</p> 
+                <img src="https://via.placeholder.com/400x300/1e293b/ffffff?text=Countdown" alt="Due Date">
+                <h3>The Countdown</h3> 
+                <p>Share the official due date or how many weeks are left!</p> 
             </div>
         </div>
     </section>
@@ -251,22 +252,22 @@
     <section id="journey">
         <h2 style="color: var(--accent-blue); font-size: 2.5rem;">The 9-Month Journey</h2>
         <div class="grid">
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+1" alt="Month 1"><h4>Month 1</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+2" alt="Month 2"><h4>Month 2</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+3" alt="Month 3"><h4>Month 3</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+4" alt="Month 4"><h4>Month 4</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+5" alt="Month 5"><h4>Month 5</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+6" alt="Month 6"><h4>Month 6</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+7" alt="Month 7"><h4>Month 7</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+8" alt="Month 8"><h4>Month 8</h4><p>Update text here.</p></div>
-            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+9" alt="Month 9"><h4>Month 9</h4><p>Update text here.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+1" alt="Month 1"><h4>Month 1</h4><p>Change this text to describe month 1 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+2" alt="Month 2"><h4>Month 2</h4><p>Change this text to describe month 2 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+3" alt="Month 3"><h4>Month 3</h4><p>Change this text to describe month 3 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+4" alt="Month 4"><h4>Month 4</h4><p>Change this text to describe month 4 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+5" alt="Month 5"><h4>Month 5</h4><p>Change this text to describe month 5 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+6" alt="Month 6"><h4>Month 6</h4><p>Change this text to describe month 6 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+7" alt="Month 7"><h4>Month 7</h4><p>Change this text to describe month 7 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+8" alt="Month 8"><h4>Month 8</h4><p>Change this text to describe month 8 highlights.</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250/1e293b/ffffff?text=Month+9" alt="Month 9"><h4>Month 9</h4><p>Change this text to describe month 9 highlights.</p></div>
         </div>
     </section>
 
     <section id="guestbook">
         <div class="guestbook-container">
             <h2 style="color: var(--accent-blue); font-size: 2.5rem; text-align: center;">Well Wishes</h2>
-            <p style="text-align: center; margin-bottom: 40px;">Leave a message for the Martinez Family!</p>
+            <p style="text-align: center; margin-bottom: 40px; color: #ccc;">Leave a message for the Martinez Family below.</p>
             
             <div id="disqus_thread"></div>
             <script>
@@ -303,13 +304,13 @@
             const container = document.getElementById('animation-container');
             container.innerHTML = '';
             const icons = ['⚽', '🏀', '🏈', '⚾'];
-            for (let i = 0; i < 12; i++) {
+            for (let i = 0; i < 15; i++) {
                 let ball = document.createElement('div');
                 ball.className = 'ball';
                 ball.innerText = icons[Math.floor(Math.random() * icons.length)];
-                ball.style.left = Math.random() * 90 + 'vw';
-                ball.style.top = Math.random() * 85 + 'vh';
-                ball.style.animation = `bounce ${2 + Math.random() * 2}s infinite ease-in-out`;
+                ball.style.left = Math.random() * 95 + 'vw';
+                ball.style.top = Math.random() * 90 + 'vh';
+                ball.style.animation = `bounce ${2.5 + Math.random() * 2}s infinite ease-in-out`;
                 container.appendChild(ball);
             }
         }
