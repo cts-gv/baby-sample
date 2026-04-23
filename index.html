@@ -9,7 +9,7 @@
         :root {
             --pastel-blue: #AEC6CF;
             --pastel-green: #B2E2D2;
-            --soft-white: #FDFDFF;
+            --soft-white: #f4f9ff; /* Slightly tinted */
             --accent-blue: #779ECB;
             --text-color: #555;
             --card-bg: #ffffff;
@@ -18,7 +18,10 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
+            /* DESIGN UPDATE: Pastel striped background */
             background-color: var(--soft-white);
+            background-image:  linear-gradient(45deg, #e5f0ff 25%, transparent 25%, transparent 50%, #e5f0ff 50%, #e5f0ff 75%, transparent 75%, transparent);
+            background-size: 100px 100px;
             color: var(--text-color);
             overflow-x: hidden;
         }
@@ -35,14 +38,13 @@
             100% { transform: scale(1); }
         }
 
-        /* Bouncing Sports Balls - Background Only */
         #animation-container {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Keeps them behind text/images */
+            z-index: -1;
             overflow: hidden;
         }
 
@@ -91,12 +93,11 @@
 
         .active { display: block; }
 
-        /* --- Home Page Specifics --- */
         .hero-img {
             width: 100%;
             max-width: 800px;
             height: auto;
-            border-radius: 50px 5px 50px 5px; /* Playful asymmetric corners */
+            border-radius: 50px 5px 50px 5px;
             border: 10px solid white;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
@@ -145,8 +146,6 @@
             transition: 0.3s;
         }
 
-        .card:hover { transform: scale(1.02); }
-
         .card img {
             width: 100%;
             height: 250px;
@@ -157,7 +156,8 @@
 
         /* --- Guestbook Style --- */
         .guestbook-container {
-            background: linear-gradient(135deg, #ffffff 0%, #f0f7f9 100%);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
             padding: 40px;
             border-radius: 30px;
             border: 2px dashed var(--pastel-blue);
@@ -177,9 +177,6 @@
             transform: rotate(-2deg);
             border: 1px solid #eee;
         }
-
-        .polaroid:nth-child(even) { transform: rotate(2deg); }
-
     </style>
 </head>
 <body>
@@ -191,93 +188,65 @@
     </nav>
 
     <section id="home" class="active">
-        <div id="animation-container"></div> <h1 style="font-size: 3rem; color: var(--accent-blue);">Baby Martinez</h1>
-        <p style="font-size: 1.2rem;">Our greatest adventure begins soon!</p>
+        <div id="animation-container"></div>
+        
+        <h1 style="font-size: 3.5rem; color: var(--accent-blue); text-shadow: 2px 2px white;">Baby Martinez</h1>
+        <p style="font-size: 1.2rem; font-weight: bold;">Our greatest adventure begins soon!</p>
         
         <img src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1000" alt="Boy toys and sports" class="hero-img">
         
         <div class="btn-container">
             <a href="YOUR_AMAZON_LINK" class="btn amazon"><i class="fab fa-amazon"></i> Amazon Registry</a>
-            <a href="YOUR_PAYPAL_LINK" class="btn paypal"><i class="fas fa-bear"></i> Support (🧸)</a>
-            <a href="YOUR_VENMO_LINK" class="btn venmo"><i class="fas fa-duck"></i> Love (🦆)</a>
+            <a href="YOUR_PAYPAL_LINK" class="btn paypal"><i class="fas fa-paw"></i> PayPal Support 🧸</a>
+            <a href="YOUR_VENMO_LINK" class="btn venmo"><i class="fas fa-baseball-ball"></i> Venmo Love ⚾</a>
         </div>
 
         <h2 style="margin-top: 60px;">Special Highlights</h2>
         <div class="grid">
             <div class="card">
                 <img src="https://via.placeholder.com/400x300?text=Highlight+1" alt="Highlight 1">
-                <h3>Our Excitement</h3> <p>Add a personal story here about how you felt when you found out!</p> </div>
+                <h3>Our Excitement</h3> 
+                <p>Add a personal story here about how you felt when you found out!</p> 
+            </div>
             <div class="card">
                 <img src="https://via.placeholder.com/400x300?text=Highlight+2" alt="Highlight 2">
-                <h3>Family Traditions</h3> <p>Share a little bit about what you are looking forward to teaching him.</p> </div>
+                <h3>Family Traditions</h3>
+                <p>Share a little bit about what you are looking forward to teaching him.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Highlight+3" alt="Highlight 3">
+                <h3>The Nursery</h3> <p>Write about the colors or theme you chose for the baby's room.</p> </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/400x300?text=Highlight+4" alt="Highlight 4">
+                <h3>Big Brother/Sister or Pets</h3> <p>Add a note about how the rest of the family is preparing for the arrival.</p> </div>
         </div>
     </section>
 
     <section id="journey">
         <h2 style="color: var(--accent-blue);">The 9-Month Journey</h2>
         <div class="grid">
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+1" alt="Month 1">
-                <h4>Month 1</h4> <p>Describe your first month here.</p> </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+2" alt="Month 2">
-                <h4>Month 2</h4>
-                <p>The journey continues...</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+3" alt="Month 3">
-                <h4>Month 3</h4>
-                <p>Quarter way there!</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+4" alt="Month 4">
-                <h4>Month 4</h4>
-                <p>Hello, second trimester.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+5" alt="Month 5">
-                <h4>Month 5</h4>
-                <p>Halfway point reached.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+6" alt="Month 6">
-                <h4>Month 6</h4>
-                <p>Feeling those first kicks!</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+7" alt="Month 7">
-                <h4>Month 7</h4>
-                <p>Welcome to the final stretch.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+8" alt="Month 8">
-                <h4>Month 8</h4>
-                <p>Getting the nursery ready.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x250?text=Month+9" alt="Month 9">
-                <h4>Month 9</h4>
-                <p>We can't wait to meet you!</p>
-            </div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+1" alt="Month 1"><h4>Month 1</h4><p>Text for Month 1</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+2" alt="Month 2"><h4>Month 2</h4><p>Text for Month 2</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+3" alt="Month 3"><h4>Month 3</h4><p>Text for Month 3</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+4" alt="Month 4"><h4>Month 4</h4><p>Text for Month 4</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+5" alt="Month 5"><h4>Month 5</h4><p>Text for Month 5</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+6" alt="Month 6"><h4>Month 6</h4><p>Text for Month 6</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+7" alt="Month 7"><h4>Month 7</h4><p>Text for Month 7</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+8" alt="Month 8"><h4>Month 8</h4><p>Text for Month 8</p></div>
+            <div class="card"><img src="https://via.placeholder.com/300x250?text=Month+9" alt="Month 9"><h4>Month 9</h4><p>Text for Month 9</p></div>
         </div>
     </section>
 
     <section id="guestbook">
         <div class="guestbook-container">
             <h2 style="color: var(--accent-blue);">Leave a Note</h2>
-            <p>We'll read these to Baby Martinez one day!</p>
-            
             <div style="display: flex; flex-direction: column; max-width: 500px; margin: auto; gap: 15px;">
                 <input type="text" id="name" placeholder="Your Name" style="padding:15px; border-radius:10px; border:1px solid var(--pastel-blue);">
                 <textarea id="msg" placeholder="Your message..." style="padding:15px; border-radius:10px; border:1px solid var(--pastel-blue); height: 100px;"></textarea>
                 <button class="btn" style="background-color: var(--accent-blue); color: white; border: none; cursor: pointer; justify-content: center;" onclick="addMessage()">Post Message</button>
             </div>
-
             <div id="messages-display">
-                <div class="polaroid">
-                    <p style="font-family: 'Cursive', sans-serif;">"We are so happy for you both! Can't wait to meet him!"</p>
-                    <small>— Aunt Sarah</small>
-                </div>
+                <div class="polaroid"><p>"Can't wait for baseball season with the little one!"</p><small>— Grandad</small></div>
             </div>
         </div>
     </section>
@@ -286,8 +255,6 @@
         function showSection(id) {
             document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
             document.getElementById(id).classList.add('active');
-            
-            // Only show animation on Home
             const animContainer = document.getElementById('animation-container');
             if(id === 'home') {
                 animContainer.style.display = 'block';
@@ -325,8 +292,6 @@
                 document.getElementById('msg').value = '';
             }
         }
-
-        // Initialize balls on first load
         createBalls();
     </script>
 </body>
