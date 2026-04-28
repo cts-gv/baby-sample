@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Martinez — Arriving 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Floating Balls Background -->
+    <div id="animation-container"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <span class="nav-brand">👶 Baby Martinez</span>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#journey" class="nav-link">Our Journey</a>
+                <a href="#wishes" class="nav-link">Well Wishes</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#journey" class="mobile-link">Our Journey</a>
+        <a href="#wishes" class="mobile-link">Well Wishes</a>
+    </div>
+
+    <!-- ===========================
+         SECTION 1: HOME
+    =========================== -->
+    <section id="home">
+        <div class="hero-wrapper">
+            <h1 class="hero-title">Baby Martinez</h1>
+            <p class="hero-subtitle">Arriving 2026 — He's Almost Here!</p>
+
+            <!-- Hero Image -->
+            <div class="hero-img-container">
+                <!--
+                    TO CHANGE HERO IMAGE:
+                    Replace the src below with your own photo URL or a relative path like "images/hero.jpg"
+                -->
+                <img
+                    src="https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=1000"
+                    alt="Baby announcement photo"
+                    class="hero-img"
+                    id="hero-photo"
+                >
+            </div>
+
+            <!-- Parent Message Area -->
+            <!--
+                TO EDIT: Change the text inside <p class="parent-message"> below.
+            -->
+            <div class="parent-note">
+                <div class="parent-note-inner">
+                    <span class="note-icon">💌</span>
+                    <p class="parent-message">
+                        We are beyond excited to share that our little one is on his way!
+                        We can't wait to meet him and shower him with all the love in the world.
+                        Thank you for being part of this incredible journey with us.
+                        — Mom & Dad ❤️
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== HIGHLIGHTS SECTION ===== -->
+        <div class="section-block">
+            <h2 class="section-title">The Highlights</h2>
+            <p class="section-sub">A few things we're over the moon about 🌙</p>
+
+            <!--
+                TO EDIT CARDS: Change the <h3>, <p>, and <img src> in each .card below.
+                TO ADD A CARD: Copy one <div class="card">...</div> block and paste it.
+                TO REMOVE A CARD: Delete the entire <div class="card">...</div> block.
+            -->
+            <div class="grid" id="highlights-grid">
+
+                <div class="card">
+                    <!--  Replace src with your own image URL or path like "images/excitement.jpg"  -->
+                    <img src="images/card1.jpg" alt="Our Excitement" onerror="this.src='https://via.placeholder.com/400x250/1e293b/89CFF0?text=Our+Excitement'">
+                    <div class="card-body">
+                        <h3>Our Excitement</h3>
+                        <p>Share how you felt finding out about Baby Martinez! This is your moment to capture that pure joy.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/card2.jpg" alt="Future Slugger" onerror="this.src='https://via.placeholder.com/400x250/1e293b/89CFF0?text=Future+Slugger'">
+                    <div class="card-body">
+                        <h3>Future Slugger ⚾</h3>
+                        <p>Add text about the sports you're excited to teach him one day. The ballpark is calling his name!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/card3.jpg" alt="The Nursery" onerror="this.src='https://via.placeholder.com/400x250/1e293b/89CFF0?text=The+Nursery'">
+                    <div class="card-body">
+                        <h3>The Nursery 🎨</h3>
+                        <p>Describe the colors and theme you've picked for his new room. Every detail has been chosen with love.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/card4.jpg" alt="Family Roots" onerror="this.src='https://via.placeholder.com/400x250/1e293b/89CFF0?text=Family+Roots'">
+                    <div class="card-body">
+                        <h3>Family Roots 🌳</h3>
+                        <p>Share a note about special family names or traditions he will inherit. The legacy continues!</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/card5.jpg" alt="The Big Adventure" onerror="this.src='https://via.placeholder.com/400x250/1e293b/89CFF0?text=The+Big+Adventure'">
+                    <div class="card-body">
+                        <h3>The Big Adventure 🚀</h3>
+                        <p>What does this new chapter mean to you? Put that heartfelt message here for him to read one day.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/card6.jpg" alt="The Countdown" onerror="this.src='https://via.placeholder.com/400x250/1e293b/89CFF0?text=The+Countdown'">
+                    <div class="card-body">
+                        <h3>The Countdown ⏳</h3>
+                        <p>Share the official due date or how many weeks are left. The anticipation is real!</p>
+                    </div>
+                </div>
+
+            </div><!-- end .grid -->
+
+            <!-- ===== SUPPORT & REGISTRY BUTTONS ===== -->
+            <!--
+                ————————————————————————————————————————
+                HOW TO UPDATE REGISTRY / DONATION LINKS:
+                Replace "YOUR_AMAZON_LINK", "YOUR_PAYPAL_LINK", and "YOUR_VENMO_LINK"
+                with the actual URLs for each service.
+                ————————————————————————————————————————
+            -->
+            <div class="support-block">
+                <h3 class="support-title">Support Baby Martinez 🧸</h3>
+                <p class="support-desc">
+                    Want to help welcome our little one? You can shop directly from our
+                    <strong>Baby Registry</strong> on Amazon, or send a gift via PayPal or Venmo.
+                    Every bit of love means the world to us!
+                </p>
+                <div class="support-badges">
+                    <span class="badge badge-registry">🛍️ Registry</span>
+                    <span class="badge badge-donation">💝 Donations</span>
+                </div>
+                <div class="btn-container">
+                    <a href="YOUR_AMAZON_LINK" class="btn amazon" target="_blank" rel="noopener">
+                        <i class="fab fa-amazon"></i>
+                        <span>
+                            <small>Baby Registry</small>
+                            Amazon
+                        </span>
+                    </a>
+                    <a href="YOUR_PAYPAL_LINK" class="btn paypal" target="_blank" rel="noopener">
+                        <i class="fab fa-paypal"></i>
+                        <span>
+                            <small>Send a Gift</small>
+                            PayPal
+                        </span>
+                    </a>
+                    <a href="YOUR_VENMO_LINK" class="btn venmo" target="_blank" rel="noopener">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>
+                            <small>Send a Gift</small>
+                            Venmo
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+        </div><!-- end section-block -->
+    </section>
+
+
+    <!-- ===========================
+         SECTION 2: OUR JOURNEY
+    =========================== -->
+    <section id="journey">
+        <div class="section-block">
+            <h2 class="section-title">The 9-Month Journey</h2>
+            <p class="section-sub">Month by month, here's how it's been going 💙</p>
+
+            <!--
+                TO EDIT: Update the <h4>, <p>, and <img src> for each month card.
+                Replace src with your own photo or a relative path like "images/month1.jpg"
+            -->
+            <div class="grid journey-grid">
+
+                <div class="card month-card">
+                    <img src="images/month1.jpg" alt="Month 1" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+1'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 1</span>
+                        <h4>The Beginning</h4>
+                        <p>Describe month 1 highlights — the moment you found out, how you felt, what changed!</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month2.jpg" alt="Month 2" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+2'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 2</span>
+                        <h4>Settling In</h4>
+                        <p>Describe month 2 highlights here.</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month3.jpg" alt="Month 3" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+3'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 3</span>
+                        <h4>First Trimester Done!</h4>
+                        <p>Describe month 3 highlights here.</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month4.jpg" alt="Month 4" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+4'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 4</span>
+                        <h4>Growing Strong</h4>
+                        <p>Describe month 4 highlights here.</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month5.jpg" alt="Month 5" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+5'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 5</span>
+                        <h4>Halfway There!</h4>
+                        <p>Describe month 5 highlights here.</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month6.jpg" alt="Month 6" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+6'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 6</span>
+                        <h4>Getting Real!</h4>
+                        <p>Describe month 6 highlights here.</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month7.jpg" alt="Month 7" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+7'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 7</span>
+                        <h4>Third Trimester!</h4>
+                        <p>Describe month 7 highlights here.</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month8.jpg" alt="Month 8" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+8'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 8</span>
+                        <h4>Almost Ready!</h4>
+                        <p>Describe month 8 highlights here.</p>
+                    </div>
+                </div>
+
+                <div class="card month-card">
+                    <img src="images/month9.jpg" alt="Month 9" onerror="this.src='https://via.placeholder.com/300x220/1e293b/89CFF0?text=Month+9'">
+                    <div class="card-body">
+                        <span class="month-tag">Month 9</span>
+                        <h4>Any Day Now! 🎉</h4>
+                        <p>Describe month 9 highlights here. The final stretch!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===========================
+         SECTION 3: WELL WISHES
+    =========================== -->
+    <section id="wishes">
+        <div class="section-block">
+            <h2 class="section-title">Well Wishes 💌</h2>
+            <p class="section-sub">Leave a message for the Martinez Family below.</p>
+
+            <!--
+                FORMSPREE SETUP:
+                1. Go to https://formspree.io and create a free account.
+                2. Create a new form and copy your form ID (looks like: xpwzabcd).
+                3. Replace "YOUR_FORMSPREE_ID" in the action URL below.
+                   Example: action="https://formspree.io/f/xpwzabcd"
+            -->
+            <div class="guestbook-container">
+                <form
+                    action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+                    method="POST"
+                    class="wish-form"
+                    id="wish-form"
+                >
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="wish-name">Your Name *</label>
+                            <input type="text" id="wish-name" name="name" placeholder="e.g. Aunt Maria" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="wish-email">Your Email *</label>
+                            <input type="email" id="wish-email" name="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="wish-relation">Your Relation to the Family</label>
+                        <input type="text" id="wish-relation" name="relation" placeholder="e.g. Family Friend, Cousin, Coworker...">
+                    </div>
+                    <div class="form-group">
+                        <label for="wish-message">Your Message *</label>
+                        <textarea id="wish-message" name="message" rows="5" placeholder="Write your well wishes for Baby Martinez and the family here..." required></textarea>
+                    </div>
+                    <!-- Honeypot spam protection -->
+                    <input type="text" name="_gotcha" style="display:none">
+                    <input type="hidden" name="_subject" value="New Well Wish for Baby Martinez! 💙">
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send My Wishes
+                    </button>
+                </form>
+
+                <!-- Success / Error messages -->
+                <div id="form-success" class="form-message success" style="display:none;">
+                    <i class="fas fa-heart"></i> Thank you! Your well wishes were sent to the Martinez Family! 💙
+                </div>
+                <div id="form-error" class="form-message error" style="display:none;">
+                    <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or contact the family directly.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with 💙 for Baby Martinez &nbsp;|&nbsp; Arriving 2026</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
